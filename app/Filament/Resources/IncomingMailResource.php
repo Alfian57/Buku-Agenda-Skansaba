@@ -56,7 +56,7 @@ class IncomingMailResource extends Resource
                     DatePicker::make('tanggal_surat')
                         ->required(),
                     TextInput::make('no_surat')
-                        ->unique(fn (Page $livewire): bool => $livewire instanceof CreateRecord)
+                        ->unique()
                         ->required()
                         ->maxLength(255),
                     TextInput::make('pengirim')
